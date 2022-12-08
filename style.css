@@ -82,7 +82,7 @@ header .logo{
 
 header .logo span{
     text-transform: uppercase;
-    color: var(--second-color);
+    color: var(--main-color);
 }
 
 header .navbar a{
