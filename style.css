@@ -2,13 +2,14 @@
 :root{
     --main-color:#7f4f24;
     --body-color:#BAD59E;
-    --btn-color:#383838;
+    --btn-color:#232d34;
     --hover-color:#0E0E0E;
     --second-color:#879D6C;
     --h-color:#0E0E0E;
     --black-color:#111;
     --white-color:#fff;
-    --header-background-color:#222;
+    --header-background-color:#232d34;
+    --backgroundImage-color:#7c976c
 
 }
 
@@ -136,6 +137,14 @@ header .follow a:hover{
 .home img{ 
         height: 100%;
         width: 100%;
+        /* border-radius:50% ; */
+        border-bottom-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 30%;
+        border-bottom-right-radius: 30%;
+        border: .3rem solid var(--main-color);
+        background-color: var(--backgroundImage-color);
+        box-shadow: 1.5rem 1.5rem 3rem rgb(0, 0, 0);
        
 }
 
@@ -206,9 +215,10 @@ header .follow a:hover{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border: 1rem solid #242D18;
-    border-radius: .5rem;
-    box-shadow: 0 .7rem 1.5rem rgb(0,0  ,0, .2);
+    border: .4rem solid var(--main-color);
+    border-radius: 5%;
+    background-color: var(--backgroundImage-color);
+    box-shadow: .7rem 1rem .7rem rgb(0,0  ,0, .6);
 }
 .about .row-1 .content{
     flex: 1 1 30rem;
@@ -241,26 +251,24 @@ header .follow a:hover{
 
 
 
+/* my skills start  */
 
-
-
-
-.about .row-2{
+.skills .row{
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     align-items: center;
 }
 
-.about .row-2 .skills{
+.skills .row .myskills{
     flex: 1 1 40rem;
 }
 
-.about .row-2 .skills .progress{
+.skills .row .myskills .progress{
     padding: 1rem 0;
 }
 
-.about .row-2 .skills .progress h3{
+.skills .row .myskills .progress h3{
     display: flex;
     justify-content: space-between;
     padding: .7rem 0;
@@ -270,7 +278,7 @@ header .follow a:hover{
 
 }
 
-.about .row-2 .skills .progress .bar{
+.skills .row .myskills .progress .bar{
     width: 100%;
     background:var(--white-color);
     overflow: hidden;
@@ -279,39 +287,37 @@ header .follow a:hover{
 
 }
 
-.about .row-2 .skills .progress .bar span{
+.skills .row .myskills .progress .bar span{
     display: block;
     height: 100%;
     background: #242D18;
     border-radius: 50rem;
 }
 
-.about .row-2 .skills .progress:nth-child(1) .bar span{ 
+.skills .row .myskills .progress:nth-child(1) .bar span{ 
     width: 78%;
 }
 
-.about .row-2 .skills .progress:nth-child(2) .bar span{ 
+.skills .row .myskills .progress:nth-child(2) .bar span{ 
     width: 85%;
 }
 
-.about .row-2 .skills .progress:nth-child(3) .bar span{ 
+.skills .row .myskills .progress:nth-child(3) .bar span{ 
     width: 70%;
 }
 
-.about .row-2 .skills .progress:nth-child(4) .bar span{ 
+.skills .row .myskills .progress:nth-child(4) .bar span{ 
     width: 73%;
 }
 
-
-
-.about .row-2 .box-container{
+.skills .row .box-container{
     display: flex;
     flex: 1 1 40rem;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
 
-.about .row-2 .box-container .box{
+.skills .row .box-container .box{
     flex: 1 1 20rem;
     background:var(--second-color);
     /* margin: 1rem; */
@@ -320,16 +326,19 @@ header .follow a:hover{
     box-shadow: .7rem .8rem 1rem var(--black-color);
 }
 
-.about .row-2 .box-container .box h3{
+.skills .row .box-container .box h3{
     font-size: 2rem;
 }
 
-.about .row-2 .box-container .box p{
+.skills .row .box-container .box p{
     padding-top: .4rem;
     font-size: 1.5rem;
 }
 
-/* .services */
+/* end my skills */
+
+
+/* .services start*/
 
 .services .box-container{
     display: flex;
@@ -363,11 +372,83 @@ header .follow a:hover{
     border-radius: 50%;
 }
 
+ /* end services */
+
+/* conact start*/
+
+.contact .icons-container{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-bottom: 3rem;
+}
+
+.contact .icons-container .icons{
+    flex: 1 1 25rem;
+    text-align: center;
+    padding: 2rem;
+    background: var(--second-color);
+    box-shadow: .5rem .8rem 1rem var(--black-color);
+    border-radius: .5rem;
+}
+
+.contact .icons-container .icons i{
+    height:4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 2.5rem;
+    color: var(--black-color);
+    border-radius: 50%;
+
+}
+
+.contact .icons-container .icons h3{
+    font-size: 1.5rem;
+    text-transform: none;
+
+}
+
+.contact .icons-container .icons p{
+    font-size: 1.8rem;
+    text-transform: none;
+    font-weight: 600;
+}
+
+.contact .row form{
+        flex: 1 1 50rem;
+        /* background: var(--white-color); */
+        padding: .8rem;
+        padding-bottom: 7rem;
+        box-shadow:.5rem .7rem .9rem 1rem var(--black-color);
+        border-radius: .5rem
+}
+
+.contact .row form .box{
+    /* outline: auto; */
+    border-radius: .5rem;
+    width: 100%;
+    color: #333;
+    text-transform: none;
+    font-size: 1.8rem;
+    padding: 1rem 1rem;
+    margin: 1.3rem 0;
+}
+.contact .row form textarea{
+    width: 100%;
+    color: #333;
+    text-transform: none;
+    font-size: 1.8rem;
+    padding: 1rem 1rem;
+    margin: 1rem 0;
+}
+
+.contact .icons-container .row .btn{
+ float: right;
+ /* flex-wrap: wrap; */
+}
 
 
-
-
-
+/* contact end  */
 
 
 /* queries */
